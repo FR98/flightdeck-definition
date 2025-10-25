@@ -38,7 +38,7 @@ The application follows a serverless SaaS architecture with multi-tenancy suppor
 - **Database**: Amazon DynamoDB (NoSQL)
 - **Authentication**: AWS Cognito with JWT tokens
 - **API**: AWS API Gateway with Lambda integration
-- **Subscriptions**: Stripe for billing
+- **Subscriptions**: Recurrente for billing (https://documenter.getpostman.com/view/10340859/2sA2rFQf5R)
 - **Infrastructure**: AWS CDK (Cloud Development Kit) for Infrastructure as Code
 - **Primary Region**: us-east-2 (Ohio)
 
@@ -441,7 +441,7 @@ def manage_pilot_subscription(user_id, subscription_type, payment_method=None):
     user['subscription_updated_at'] = datetime.utcnow().isoformat()
     
     if payment_method:
-        # Process payment through Stripe
+        # Process payment through Recurrente
         process_pilot_subscription_payment(user_id, subscription_type, payment_method)
     
     update_user(user)
@@ -1056,7 +1056,7 @@ def check_subscription_limits(org_id, resource_type, action):
 
 ### Billing Integration
 
-- **Payment Processing**: Stripe integration for subscription billing
+- **Payment Processing**: Recurrente integration for subscription billing
 - **Usage Tracking**: Monitor resource usage for billing calculations
 - **Automatic Provisioning**: Instant access upon successful payment
 - **Dunning Management**: Handle failed payments and account suspension

@@ -1,18 +1,5 @@
 # Implementation Plan
 
-## Current Status
-- ✅ **Core Infrastructure (CDK)**: Complete - All DynamoDB tables, Cognito, and IAM roles deployed
-- ❌ **Lambda Functions**: Not started - No Python backend code exists
-- ❌ **API Gateway**: Not started - No API stack implemented
-- ❌ **React Frontend**: Not started - No frontend code exists
-- ❌ **Amplify Stack**: Not started - No frontend deployment configured
-
-## Next Priority Tasks
-1. **Task 1.2**: Create Lambda function source code structure
-2. **Task 1.3**: Create API stack with Lambda functions and API Gateway  
-3. **Task 11.1**: Create React project structure
-4. **Task 2.1**: Create Cognito user pool and identity pool configuration
-
 - [x] 1. Set up project infrastructure with AWS CDK
   - [x] 1.1 Initialize CDK project and core infrastructure stack
     - Create CDK TypeScript project with proper structure for us-east-2 region
@@ -22,8 +9,8 @@
     - Create IAM roles and policies for Lambda functions
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 1.2 Create Lambda function source code structure
-    - Create lambda-functions directory with Python handlers
+  - [x] 1.2 Create Lambda function source code structure
+    - Create flightdeck-core-api directory with Python handlers
     - Set up shared utilities and service modules
     - Create requirements.txt for Python dependencies
     - Implement base handler structure with error handling
@@ -111,7 +98,7 @@
 
   - [ ] 4.2 Implement subscription and billing integration
     - Create billing_handler for subscription management
-    - Integrate with Stripe for payment processing
+    - Integrate with Recurrente for payment processing
     - Implement usage tracking and limits enforcement
     - Add subscription tier feature gating logic
     - _Requirements: 6.1, 6.2, 6.5_
@@ -148,7 +135,7 @@
   - [ ] 5.4 Implement individual pilot subscription system
     - Add pilot subscription management (basic/premium tiers)
     - Create feature gating for premium pilot features
-    - Implement Stripe integration for individual pilot billing
+    - Implement Recurrente integration for individual pilot billing
     - Add pilot subscription status tracking and validation
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
 
