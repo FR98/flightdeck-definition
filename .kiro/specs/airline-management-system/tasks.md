@@ -38,20 +38,20 @@
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
 - [ ] 2. Implement core authentication and authorization system
-  - [ ] 2.1 Create Cognito user pool and identity pool configuration
-    - Configure user pool with email-based authentication
+  - [x] 2.1 Create Cognito user pool and identity pool configuration
+    - Configure user pool with email-based otp passwordless authentication
     - Set up user pool client for React frontend
     - Define custom attributes for user roles
     - _Requirements: 6.1, 6.2, 6.5_
 
-  - [ ] 2.2 Implement Lambda authorizer for API Gateway
+  - [x] 2.2 Implement Lambda authorizer for API Gateway
     - Create custom authorizer function for JWT validation
     - Implement role-based permission checking
     - Add organization isolation validation
     - Handle Sudo, Administrator, Pilot, and Counter roles
     - _Requirements: 6.1, 6.2, 6.5_
 
-  - [ ] 2.3 Create user management Lambda functions
+  - [x] 2.3 Create user management Lambda functions
     - Implement users_handler for user CRUD operations
     - Create user invitation and role assignment logic
     - Add organization membership management
@@ -60,7 +60,7 @@
     - _Requirements: 6.1, 6.2, 6.5_
 
 - [ ] 3. Implement soft delete and activity logging system
-  - [ ] 3.1 Create DeletedRecords table and soft delete operations
+  - [x] 3.1 Create DeletedRecords table and soft delete operations
     - Implement DeletedRecords DynamoDB table with proper indexes
     - Create soft_delete_service module for record deletion and storage
     - Add soft delete functionality to all CRUD operations
