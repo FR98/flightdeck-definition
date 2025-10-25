@@ -16,21 +16,21 @@
     - Implement base handler structure with error handling
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 1.3 Create API stack with Lambda functions and API Gateway
+  - [x] 1.3 Create API stack with Lambda functions and API Gateway
     - Implement ApiStack with Lambda function definitions
     - Configure API Gateway with custom authorizer
     - Set up Lambda layers for shared dependencies
     - Add proper CORS and throttling configuration
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 1.4 Implement frontend stack with AWS Amplify
+  - [x] 1.4 Implement frontend stack with AWS Amplify
     - Create FrontendStack with AWS Amplify app configuration
     - Set up Amplify CI/CD pipeline with GitHub integration
-    - Configure environment-specific branches (dev/staging/prod)
+    - Configure environment-specific branches (dev/prod)
     - Add custom domain configuration through Amplify
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 1.5 Set up monitoring stack for observability
+  - [x] 1.5 Set up monitoring stack for observability
     - Create MonitoringStack with CloudWatch dashboards
     - Configure X-Ray tracing for distributed requests
     - Set up CloudWatch alarms for errors and performance
@@ -343,13 +343,12 @@
     - Configure Amplify CI/CD pipeline for frontend deployment
     - Implement automated testing before CDK synth and deploy
     - Add environment-specific CDK context configurations
-    - Create CDK deployment stages (dev, staging, production)
+    - Create CDK deployment stages (dev, production)
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
   - [ ] 14.2 Configure multi-environment CDK deployments
     - Set up CDK bootstrap for us-east-2 region in different AWS accounts
     - Deploy development environment with CDK and Amplify
-    - Configure staging environment with production-like settings
     - Deploy production environment with proper security and scaling
     - Implement CDK rollback procedures and disaster recovery
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
@@ -374,7 +373,7 @@ The implementation plan now includes comprehensive AWS CDK infrastructure as cod
 
 ### CDK Benefits:
 - **Version Control**: All infrastructure changes tracked in Git
-- **Reproducible Deployments**: Consistent environments across dev/staging/prod
+- **Reproducible Deployments**: Consistent environments across dev/prod
 - **Type Safety**: TypeScript provides compile-time validation
 - **Automated Resource Management**: Dependency resolution and cleanup
 - **Cost Optimization**: Resource tagging and cost allocation
@@ -385,7 +384,6 @@ The implementation plan now includes comprehensive AWS CDK infrastructure as cod
 - **Primary Region**: us-east-2 (Ohio) for all AWS resources
 - **Frontend**: AWS Amplify with automated CI/CD pipeline
 - Development environment for testing and iteration
-- Staging environment for pre-production validation
 - Production environment with enhanced security and monitoring
 - Automated CI/CD pipeline with CDK deployment stages
 - **New Features**: Soft delete system, activity logging, individual pilot subscriptions

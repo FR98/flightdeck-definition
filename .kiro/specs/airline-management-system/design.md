@@ -1451,7 +1451,7 @@ The application infrastructure is organized into multiple CDK stacks for better 
 
 #### 3. Frontend Stack (`FrontendStack`)
 - **AWS Amplify App**: Automated CI/CD pipeline and hosting for React app
-- **Amplify Branch**: Environment-specific deployments (dev/staging/prod)
+- **Amplify Branch**: Environment-specific deployments (dev/prod)
 - **Custom Domain**: Domain configuration through Amplify
 - **Build Settings**: Automated build and deployment configuration
 
@@ -1730,19 +1730,13 @@ export class ApiStack extends Stack {
     "development": {
       "account": "123456789012",
       "region": "us-east-2",
-      "domainName": "dev.flightdeck.com",
+      "domainName": "dev.flightdeck.tensor98.com",
       "certificateArn": "arn:aws:acm:us-east-2:123456789012:certificate/dev-cert"
-    },
-    "staging": {
-      "account": "123456789012", 
-      "region": "us-east-2",
-      "domainName": "staging.flightdeck.com",
-      "certificateArn": "arn:aws:acm:us-east-2:123456789012:certificate/staging-cert"
     },
     "production": {
       "account": "987654321098",
       "region": "us-east-2", 
-      "domainName": "flightdeck.com",
+      "domainName": "app.flightdeck.tensor98.com",
       "certificateArn": "arn:aws:acm:us-east-2:987654321098:certificate/prod-cert"
     }
   }
@@ -1881,7 +1875,7 @@ cdk destroy --all --context environment=development --region us-east-2
 ### Benefits of CDK Infrastructure as Code
 
 1. **Version Control**: All infrastructure changes tracked in Git
-2. **Reproducible Deployments**: Consistent environments across dev/staging/prod
+2. **Reproducible Deployments**: Consistent environments across dev/prod
 3. **Type Safety**: TypeScript provides compile-time validation
 4. **Resource Management**: Automatic dependency resolution and cleanup
 5. **Cost Optimization**: Easy resource tagging and cost allocation
@@ -1899,9 +1893,8 @@ cdk destroy --all --context environment=development --region us-east-2
 - **Primary Name**: FlightDeck
 - **Tagline**: "Your Airline Command Center"
 - **Domain Strategy**: 
-  - Production: `flightdeck.com`
-  - Staging: `staging.flightdeck.com`
-  - Development: `dev.flightdeck.com`
+  - Production: `app.flightdeck.tensor98.com`
+  - Development: `dev.flightdeck.tensor98.com`
 
 #### Technical Branding
 - **AWS Resource Naming**: All AWS resources prefixed with `flightdeck-`
