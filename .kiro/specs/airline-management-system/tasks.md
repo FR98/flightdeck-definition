@@ -37,7 +37,7 @@
     - Add cost monitoring and billing alerts
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-- [ ] 2. Implement core authentication and authorization system
+- [x] 2. Implement core authentication and authorization system
   - [x] 2.1 Create Cognito user pool and identity pool configuration
     - Configure user pool with email-based otp passwordless authentication
     - Set up user pool client for React frontend
@@ -59,7 +59,7 @@
     - Add individual user subscription management for premium features
     - _Requirements: 6.1, 6.2, 6.5_
 
-- [ ] 3. Implement soft delete and activity logging system
+- [x] 3. Implement soft delete and activity logging system
   - [x] 3.1 Create DeletedRecords table and soft delete operations
     - Implement DeletedRecords DynamoDB table with proper indexes
     - Create soft_delete_service module for record deletion and storage
@@ -67,21 +67,21 @@
     - Implement record restoration from DeletedRecords table
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 3.2 Implement ActivityLogs table and audit trail system
+  - [x] 3.2 Implement ActivityLogs table and audit trail system
     - Create ActivityLogs DynamoDB table with proper indexes
     - Implement activity_log_service module for comprehensive logging
     - Add activity logging to all data modification operations
     - Create activity log querying and filtering functionality
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 3.3 Create soft delete and rollback Lambda functions
+  - [x] 3.3 Create soft delete and rollback Lambda functions
     - Implement soft_delete_handler for deletion and restoration operations
     - Create activity_logs_handler for audit trail management
     - Add rollback functionality using activity logs
     - Implement data change rollback operations
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 3.4 Integrate soft delete and logging into all handlers
+  - [x] 3.4 Integrate soft delete and logging into all handlers
     - Update all Lambda functions to use soft delete operations
     - Add activity logging to all CRUD operations
     - Implement rollback endpoints for data recovery
@@ -89,21 +89,29 @@
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
 - [ ] 4. Build multi-tenant organization management system
-  - [ ] 4.1 Implement organization data models and handlers
+  - [x] 4.1 Implement organization data models and handlers
     - Create Organizations DynamoDB table operations
     - Implement organization creation and management
     - Add subscription tier validation and feature gating
     - Create organization settings management
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 6.1_
 
-  - [ ] 4.2 Implement subscription and billing integration
+  - [x] 4.2 Implement subscription and billing integration
     - Create billing_handler for subscription management
     - Integrate with Recurrente for payment processing
     - Implement usage tracking and limits enforcement
     - Add subscription tier feature gating logic
     - _Requirements: 6.1, 6.2, 6.5_
 
-  - [ ] 4.3 Create UserOrganizations relationship management
+  - [-] 4.3 Implement subscription and billing integration according Recurrente API
+    - Read and understand Recurrente API at Recurrente-API.postman_collection.json
+    - Integrate Recurrente API endpoint to create checkout subscription (so user can create a subscription)
+    - Integrate Recurrente API endpoint to get a subscription (so user can read its own susbcription information)
+    - Integrate Recurrente API endpoint to cancel a subscription (so user can cancel its own susbcription or change subscription plan)
+    - Understand Embedded Checkouts and create tasks for frontend implementation
+    - _Requirements: 6.1, 6.2, 6.5_
+
+  - [ ] 4.4 Create UserOrganizations relationship management
     - Implement user-organization mapping table operations
     - Create role assignment and validation logic
     - Add organization member invitation system

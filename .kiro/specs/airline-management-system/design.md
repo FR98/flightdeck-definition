@@ -96,7 +96,7 @@ The application follows a serverless SaaS architecture with multi-tenancy suppor
    - Attributes: original_record (JSON), deleted_by, org_id, created_at
 
 10. **ActivityLogs Table** (Audit trail)
-    - PK: table_name, SK: record_pk#record_sk#timestamp#log_id
+    - PK: org_id, SK: tablename#record_pk#record_sk#timestamp#log_id
     - Attributes: user_id, action_type (CREATE/UPDATE/DELETE), table_name, record_id, old_values (JSON), new_values (JSON), ip_address, user_agent, created_at
 
 #### Lambda Functions
