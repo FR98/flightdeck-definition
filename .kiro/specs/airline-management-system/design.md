@@ -73,7 +73,7 @@ The application follows a serverless SaaS architecture with multi-tenancy suppor
 
 4. **UserOrganizations Table** (User-organization-role mapping)
    - PK: org_id, SK: user_id
-   - Attributes: role (administrator, pilot, counter), status (active/inactive), monthly_hours, hire_date, organization_pilot_id, created_at
+   - Attributes: role (administrator, pilot, counter), status (active/inactive), monthly_hours, hire_date, created_at
 
 5. **Aircraft Table**
    - PK: org_id, SK: aircraft_registration_id
@@ -587,7 +587,6 @@ def check_pilot_feature_access(user_id, feature):
     "assigned_by": "String",
     "monthly_hours": "Number (for pilots)",
     "hire_date": "String (ISO date)",
-    "organization_pilot_id": "String",
     "created_at": "String (ISO timestamp)"
   }
 }
