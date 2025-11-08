@@ -118,7 +118,7 @@
     - Implement cross-organization pilot support
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5, 6.1_
 
-- [ ] 5. Implement global pilot registry and individual subscriptions
+- [x] 5. Implement global pilot registry and individual subscriptions
   - [x] 5.1 Users and Pilots information
     - Implement Users DynamoDB table for authentication and basic info
     - Create Pilots endpoints for pilot-specific information, this endpoints will also use Users db table
@@ -228,7 +228,7 @@
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
 - [ ] 10. Implement resilience and performance optimizations
-  - [-] 10.1 Add jitter algorithm and retry mechanisms
+  - [x] 10.1 Add jitter algorithm and retry mechanisms
     - Implement exponential backoff with full jitter
     - Create retry decorators for DynamoDB operations
     - Add circuit breaker pattern for external services
@@ -242,64 +242,75 @@
     - Optimize memory allocation and timeout settings
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-- [ ] 11. Build React frontend application
-  - [ ] 11.1 Create React project structure
-    - Initialize React project with Vite build tool in frontend directory
+- [x] 11. Build React frontend application
+  - [x] 11.1 Create React project structure
+    - Initialize React project with Vite build tool in flightdeck-frontend directory
     - Configure Tailwind CSS for styling
     - Set up routing with React Router
     - Create basic project structure and configuration files
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 11.2 Set up core layout and authentication components
+  - [x] 11.2 Set up core layout and authentication components
     - Create responsive layout components
     - Implement AWS Cognito authentication integration
     - Set up protected routes and navigation
     - Create login and registration components
     - _Requirements: 6.1, 6.2, 6.3, 6.4, 6.5_
 
-  - [ ] 11.3 Implement user management and organization UI
+  - [x] 11.3 Implement user management and organization UI
     - Add role-based navigation and access control
     - Create user profile and organization management
     - Implement user invitation and role assignment interfaces
     - Add organization settings and subscription management
     - _Requirements: 6.1, 6.2, 6.5_
 
-  - [ ] 11.4 Build pilot management interface
+  - [x] 11.4 Implement and use shadcn (https://ui.shadcn.com/docs)
+    - Install shadcn and start using its component to build the UI
+    - Set up theme system foundation
+    - Create CSS custom properties configuration for both dark and light themes
+    - Implement theme store using Zustand for state management
+    - Create ThemeProvider context component for theme management
+    - Define a dark and light theme
+    - Ensure WCAG AA compliance for color contrast
+    - Apply dark theme as default
+    - _Requirements: 6.1, 6.2_
+
+  - [x] 11.5 Build pilot management interface
     - Create pilot list and search components
     - Implement pilot profile creation and editing
     - Add multi-organization pilot assignment UI
     - Create pilot invitation and acceptance workflow
     - _Requirements: 1.1, 1.2, 1.3, 1.4, 1.5_
 
-  - [ ] 11.5 Create aircraft management interface
+  - [x] 11.6 Create aircraft management interface
     - Build aircraft fleet overview and management
     - Implement aircraft registration and specifications
     - Add aircraft search and filtering
     - Create aircraft assignment and availability views
     - _Requirements: 2.1, 2.2, 2.3, 2.4, 2.5_
 
-  - [ ] 11.6 Develop flight operations dashboard
+  - [x] 11.7 Develop flight operations dashboard
     - Create flight scheduling and management interface
     - Implement flight board with real-time status
     - Add flight search and filtering capabilities
     - Create flight assignment and validation UI
     - _Requirements: 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7_
 
-  - [ ] 11.7 Build passenger manifest management
+  - [x] 11.8 Build passenger manifest management
     - Create passenger list and management interface
     - Implement bulk passenger import/export
     - Add passenger search and filtering
     - Create Counter role specific interface
     - _Requirements: 4.1, 4.2, 4.3, 4.4, 4.5_
 
-  - [ ] 11.8 Implement BITACORA flight log interface
+  - [x] 11.9 Implement BITACORA flight log interface
     - Create BITACORA format flight log forms
     - Implement engine parameters input and validation
     - Add maintenance section and signature capture
     - Create Excel export functionality
     - _Requirements: 5.1, 5.2, 5.3, 5.4, 5.5_
 
-  - [ ] 11.9 Build soft delete and activity logging interfaces
+  - [x] 11.10 Build soft delete and activity logging interfaces
     - Create admin interface for viewing deleted records
     - Implement record restoration functionality
     - Add activity log viewer with filtering and search
